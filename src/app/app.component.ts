@@ -9,6 +9,6 @@ export class AppComponent {
   email: string;
 
   onSubmit() {
-    console.log('submited!!')
+    console.log(this.email)
   }
 }

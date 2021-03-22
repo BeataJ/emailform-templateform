@@ -2,6 +2,7 @@
   <div class="field">
     <label class="label">Enter Email</label>
     <input
+    class="input"
     type="email"
     pattern=".+@.+\..+"
     required
@@ -10,10 +11,10 @@
     #emailControl="ngModel"
     />
     <ng-container *ngIf="emailControl.invalid && emailControl.touched">
-    <div *ngIf="emailControl.errors.required">
+    <div class="help is-danger" *ngIf="emailControl.errors.required">
       You must enter an email
     </div>
-    <div *ngIf="emailControl.errors.pattern">
+    <div class="help is-danger" *ngIf="emailControl.errors.pattern">
       Please enter a valid email
     </div>
     </ng-container>
